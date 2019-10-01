@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'digital-7';
+    src: url('digital-7.ttf');
+}
+
+
+#grid {
+    margin: auto;
+    height: 352px;
+    width: 352px;
+    border: 24px ridge rgb(124, 124, 124);
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.gridItem {
+    height: 56px;
+    width: 56px;
+    border: 16px outset rgb(124, 124, 124);
+    background-color: rgb(29, 29, 29);
+    float: left;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+
+#score {
+    margin: auto;
+    margin-top: 60px;
+    padding: 0;
+    width: 380px;
+    height: 30px;
+    border: 10px ridge rgb(124, 124, 124);
+    color: rgb(255, 255, 255);
+    background-color: rgb(24, 24, 24);
+    font-size: 27px;
+    font-family: 'digital-7', cursive;
+}
+
+#score p {
+    margin: 0;
+    margin-top: 1px;
+    padding: 0;
+}
+
+#sleft {
+    float: left;
+    width: 38%;
+    padding-left: 2%;
+}
+
+#scenter {
+    float: left;
+    width: 30%;
+}
+
+#sright {
+    float: left;
+    width: 30%;
+}
+
+#buttons{
+    margin: auto;
+    padding: 0;
+    width: 380px;
+    height: 42px;
+    border: 10px ridge rgb(124, 124, 124);
+    color: rgb(255, 255, 255);
+    background-color: rgb(24, 24, 24);
+}
+
+.bbutton{
+    height: 42px;
+    width: 42px;
+    border: 4px outset rgb(124, 124, 124);
+    background-color: rgb(29, 29, 29);
+    color:rgb(187, 187, 187);
+    float: left;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    outline:none;
+    font-weight: bold;
+    transition: 0.1s;
+}
+
+.bbutton:hover{
+    color:white;
+}
+
+.bbutton:active{
+    background-color: rgba(255, 255, 255, 0.137);
+    transition: 0.1s;
+}
+
+#solver{
+    width: 86px;
+    color:rgb(240, 240, 240);
+    background-color: rgb(2, 158, 2);
+    border-color: rgb(1, 197, 1);
+    float: right;
+}
+
+#exp{
+    margin: auto;
+    padding: auto;
+    background-color: rgb(29, 29, 29);
+    border: 4px outset rgb(124, 124, 124);
+    width: 392px;
+    height: 40px;
+}
+
+#inner{
+    margin-top:2px;
+    border: none;
+    font-size: 20px;
+    background-color: rgba(145, 0, 0, 0);
+    width: 370px;
+    height: 32px;
+    margin-left: 10px;
+    color:white;
+    outline:none;
+}
+
+#grid img{
+    position: absolute;
+    width:352px;
+    opacity: 0;
+}

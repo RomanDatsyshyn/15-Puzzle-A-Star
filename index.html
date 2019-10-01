@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="4.js"></script>
+    <link href="fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="score">
+        <div id="sleft">
+            <p id="counter1">0</p>
+        </div>
+        <div id="scenter">
+            <p id="counter2">0</p>
+        </div>
+        <div id="sright">
+            <p id="counter3">0</p>
+        </div>
+    </div>
+    <div id="grid">
+        <img id="loader" src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="">
+        <p class="gridItem" id="grid0"></p>
+        <p class="gridItem" id="grid1"></p>
+        <p class="gridItem" id="grid2"></p>
+        <p class="gridItem" id="grid3"></p>
+        <p class="gridItem" id="grid4"></p>
+        <p class="gridItem" id="grid5"></p>
+        <p class="gridItem" id="grid6"></p>
+        <p class="gridItem" id="grid7"></p>
+        <p class="gridItem" id="grid8"></p>
+        <p class="gridItem" id="grid9"></p>
+        <p class="gridItem" id="grid10"></p>
+        <p class="gridItem" id="grid11"></p>
+        <p class="gridItem" id="grid12"></p>
+        <p class="gridItem" id="grid13"></p>
+        <p class="gridItem" id="grid14"></p>
+        <p class="gridItem" id="grid15"></p>
+    </div>
+
+    <script>
+        function solver2() {
+            document.getElementById("loader").style.opacity = 0.3;
+            setTimeout(function () {
+                solverR(array);
+                document.getElementById("loader").style.opacity = 0;
+            }, 100);
+        }
+
+        function solver100() {
+            document.getElementById("loader").style.opacity = 0.3;
+            let checkedCount = 0;
+            setTimeout(function () {
+            let j = 0;
+            while (j < 10) {
+                let i = 0;
+                // deep = 1;
+                checked = [];
+                unChecked = [];
+                while (i < 500) {
+                    solver(array);
+                    if (arraysEqual(array.slice(0, 16), result.slice(0, 16))) break;
+                    i++;
+                }
+                checkedCount += checked.length;
+                // console.log(unChecked);
+                document.getElementById("counter3").innerHTML = deep;
+                j++;
+            }
+            document.getElementById("loader").style.opacity = 0;
+            document.getElementById("counter2").innerHTML = checkedCount;
+            }, 100);
+        }
+    </script>
+
+    <div id="buttons">
+        <button class="bbutton" onclick="shuffle(array)"><i class="fas fa-sync-alt"></i></button>
+        <button class="bbutton" onclick="moveUp(array)"><i class="fas fa-caret-up"></i></button>
+        <button class="bbutton" onclick="moveDown(array)"><i class="fas fa-caret-down"></i></button>
+        <button class="bbutton" onclick="moveLeft(array)"><i class="fas fa-caret-left"></i></button>
+        <button class="bbutton" onclick="moveRight(array)"><i class="fas fa-caret-right"></i></button>
+        <button class="bbutton" id="solver" onclick="solver100()">SOLVE</button>
+        <button class="bbutton" onclick="inputer()"><i class="fas fa-upload"></i></button>
+        <button class="bbutton" onclick="solver(array)"></button>
+    </div>
+    <div id="exp">
+        <input id="inner" type="text" value="11,12, ,8,2,5,9,10,14,7,1,3,4,6,13,15">
+    </div>
+</body>
+
+</html>
